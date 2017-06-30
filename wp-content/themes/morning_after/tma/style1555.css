@@ -1,0 +1,878 @@
+/*
+Theme Name: The Morning After - SoB Style!
+Theme URI: http://themasterplan.in/themes/the-morning-after/
+Description: A magazine-style theme for WordPress, available at <a href="http://themasterplan.in/themes/the-morning-after/">The Masterplan</a>.
+Version: 1.2
+Author: Arun Kale, Chris Brickley
+Author URI: http://themasterplan.in/
+
+Please read the license in the README.txt included with the theme.
+*/
+
+/* --------------------------------------------------------------
+   This theme makes use of the Blueprint CSS Framework [bjorkoy.com/blueprint]
+-------------------------------------------------------------- */
+
+/* Import stylesheets and hide from IE/Mac \*/
+/* Blueprint Comressed Version */
+
+/* reset.css */
+html {margin:0;padding:0;border:0;}
+body, div, span, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, code, del, dfn, em, img, q, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, dialog, figure, footer, header, hgroup, nav, section {margin:0;padding:0;border:0;font-size:100%;font:inherit;vertical-align:baseline;}
+article, aside, details, figcaption, figure, dialog, footer, header, hgroup, menu, nav, section {display:block;}
+body {line-height:1.5;background:white;}
+table {border-collapse:separate;border-spacing:0;}
+caption, th, td {text-align:left;font-weight:normal;float:none !important;}
+table, th, td {vertical-align:middle;}
+blockquote:before, blockquote:after, q:before, q:after {content:'';}
+blockquote, q {quotes:"" "";}
+a img {border:none;}
+:focus {outline:0;}
+
+
+/* typograpghy.css */
+html { font-size:100.01%; }
+body {
+  font-size: 75%;
+  color: #222;
+  background: #fff;
+  font-family: Verdana, Arial, Helvetica, Sans-Serif;
+}
+
+h1,h2,h3,h4,h5,h6{margin: 0;}
+div#post_content h1,div#post_content h2,div#post_content h3,div#post_content h4,div#post_content h5,
+div#post_content h6, div.entry_content h1,div.entry_content h2,div.entry_content h3,div.entry_content h4,div.entry_content h5, div.entry_content h6, div#top_story_content h1,div#top_story_content h2,div#top_story_content h3,div#top_story_content h4,div#top_story_content h5, div#top_story_content h6 {color:#00468c;display: block; letter-spacing: -0.05em;font-family:"Lucida Grande",helvetica;}
+h1{font-size:2em;}
+h2{font-size:1.7em;}
+h3{font-size:1.5em;line-height:1.2;}
+h4{font-size:1.2em;line-height:1.2;font-weight:bold;}
+h5{font-size:1em;font-weight:bold;}
+h6{font-size:1em;}
+p { margin: 0 0 1em 0; }
+/*p{margin:0 0 1.25em 0;text-align:justify;}*/
+p.last{margin-bottom:0;}
+p img{float:right;margin:.5em 0 0 1.5em;padding:0;}
+p img.top{margin-top:0;}
+ul,ol{margin:0 .75em 1.5em 1em;list-style: inside;}
+ol{list-style-type:decimal;}
+dl{margin:1.5em 0;}
+dl dt{font-weight:bold;}
+a{color:#125AA7;text-decoration:underline;outline:none;}
+a:hover{color:#000;}
+blockquote{margin:0;color:#666;padding:0 0 0 10px;border-left: 5px solid #ddd;}
+strong{font-weight:bold;}
+em{font-style:italic;}
+pre{margin-bottom:1.3em;background:#eee;border:0.1em solid #ddd;padding:1.5em;}
+code{font:0.9em Monaco,monospace;}
+hr{background:#B2CCFF;color:#B2CCFF;clear:both;float:none;width:100%;height:0.1em;margin:0 0 1.4em 0;border:none;}
+* html hr{margin:0 0 1.2em 0;}
+table{margin-bottom:1.4em;border-top:0.1em solid #ddd;border-left:0.1em solid #ddd;}
+th,td{height:1em;padding:0.2em 0.4em;border-bottom:0.1em solid #ddd;border-right:0.1em solid #ddd;}
+th{font-weight:bold;}
+label{font-weight:bold;}
+textarea{height:180px;width:300px;}
+p.small{font-size:0.8em;margin-bottom:1.875em;line-height:1.875em;}
+p.large{font-size:1.2em;line-height:2.5em;}
+p.quiet{color:#666;}
+.hide{display:none;}
+.alt{color:#666;font-family:"Warnock Pro","Goudy Old Style","Palatino","Book Antiqua",serif;font-size:1.2em;line-height:1%;font-style:italic;}
+.dquo{margin-left:-.7em;}
+p.incr,.incr p{font-size:0.83333em;line-height:1.44em;margin-bottom:1.8em;}
+
+/* grid.css */
+body{text-align:center;margin:0;}
+.scontainer{text-align:left;position:relative;padding:0;margin:0 auto;width:960px;}
+.column{float:left;margin:0 10px;padding:0;}
+* html .column{overflow-x:hidden;}
+.border{padding-right:9px;margin-right:0;border-right:1px solid #ddd;}
+.first{margin-left:0;}
+.last{margin-right:0;}
+.span-1{width:50px;}
+.span-2{width:120px;}
+.span-3{width:190px;}
+.span-4{width:260px;}
+.span-5{width:330px;}
+.span-6{width:400px;}
+.span-7{width:640px;}
+.span-300{width:300px;}
+.span-8{width:540px;}
+.span-9{width:610px;}
+.span-10{width:680px;}
+.span-11{width:750px;}
+.span-12{width:820px;}
+.span-13{width:890px;}
+.span-14{width:960px;margin:0;}
+.append-1{padding-right:70px;}
+.append-2{padding-right:140px;}
+.append-3{padding-right:210px;}
+.append-4{padding-right:280px;}
+.append-5{padding-right:350px;}
+.append-6{padding-right:420px;}
+.append-7{padding-right:490px;}
+.append-8{padding-right:560px;}
+.append-9{padding-right:630px;}
+.append-10{padding-right:700px;}
+.append-11{padding-right:770px;}
+.append-12{padding-right:840px;}
+.append-13{padding-right:910px;}
+.prepend-1{padding-left:70px;}
+.prepend-2{padding-left:140px;}
+.prepend-3{padding-left:210px;}
+.prepend-4{padding-left:280px;}
+.prepend-5{padding-left:350px;}
+.prepend-6{padding-left:420px;}
+.prepend-7{padding-left:490px;}
+.prepend-8{padding-left:560px;}
+.prepend-9{padding-left:630px;}
+.prepend-10{padding-left:700px;}
+.prepend-11{padding-left:770px;}
+.prepend-12{padding-left:840px;}
+.prepend-13{padding-left:910px;}
+.box{padding:1.5em;margin-bottom:1.5em;background:#F0F0F0;}
+.clear{display:inline-block;}
+.clear:after,.scontainer:after{content:".";display:block;height:0;clear:both;visibility:hidden;}
+* html .clear{height:1%;}
+.clear{display:block;}
+img{margin:0 0 1.3em 0;}
+.pull-1{margin-left:-70px;}
+.pull-2{margin-left:-140px;}
+.pull-3{margin-left:-210px;}
+.push-0{margin:0 0 0 1.5em;float:right;}
+.push-1{margin:0 -88px 0 1.5em;float:right;}
+.push-2{margin:0 -158px 0 1.5em;float:right;}
+.push-3{margin:0 -228px 0 1.5em;float:right;}
+
+/* buttons.css */
+a.button,button{display:block;float:left;margin:0 0.583em 0.667em 0;padding:5px 10px 6px 7px;border:0.1em solid #dedede;border-top:0.1em solid #eee;border-left:0.1em solid #eee;background-color:#f5f5f5;line-height:130%;text-decoration:none;font-weight:bold;color:#565656;cursor:pointer;font:100% "Lucida Grande",Tahoma,Arial,Verdana,sans-serif}
+button{width:auto;overflow:visible;padding:4px 10px 3px 7px}
+button[type]{padding:5px 10px 5px 7px;line-height:17px}
+*:first-child+html button[type]{padding:4px 10px 3px 7px}
+button img,a.button img{margin:0 3px -3px 0 !important;padding:0;border:none;width:16px;height:16px}
+button:hover,a.button:hover{background-color:#dff4ff;border:0.1em solid #c2e1ef;color:#336699}
+a.button:active{background-color:#6299c5;border:1px solid #6299c5;color:#fff}
+.positive{color:#529214}
+a.positive:hover,button.positive:hover{background-color:#E6EFC2;border:0.1em solid #C6D880;color:#529214}
+a.positive:active{background-color:#529214;border:0.1em solid #529214;color:#fff}
+.negative{color:#d12f19}
+a.negative:hover,button.negative:hover{background:#fbe3e4;border:0.1em solid #fbc2c4}
+a.negative:active{background-color:#d12f19;border:0.1em solid #d12f19;color:#fff}
+
+/* End import/hide */
+
+/* Start The Morning After stylesheet
+-------------------------------------------------------------- */
+body { font-family: Verdana, Arial, Helvetica, Sans-Serif; background: #ebeff2 url(images/bg/body_main.png) repeat-y top center; }
+a { color: #000; text-decoration: none; }
+h2 { font-weight: normal; }
+acronym, abbr, span.caps { cursor: help;}
+acronym, abbr {border-bottom: 1px dashed #999;}
+small {font-size: 1em; line-height: 1em; color: #bbb;}
+cite { color: #777; display: block; font-size: .9em; margin: .25em 1em .5em 1em; text-align: center;}
+#post_content cite, .entry_content cite {display: inline; margin: 0;}
+.entry_content p, .entry_content li {line-height: 1.5; text-align: justify;}
+span.nav_right, span.nav_left {
+	padding: 5px;
+	border: 1px solid #06c;
+	font-weight: bold;
+	width: auto;
+	height: auto;
+	text-decoration: none;
+	color: #06c;
+	display: block;
+}
+span.nav_right a, span.nav_left a {
+	text-decoration: none;
+}
+span.nav_right {
+	float: right;
+	text-align: right;
+	font-weight: bold;
+	}
+span.nav_left {
+	float: left;
+	text-align: left;
+}
+span.nav_left:hover,span.nav_right:hover {
+	background: #06c;
+	color: white;
+}
+.tag-bold {font-weight: bold;color: #333;}
+/* Header styles
+-------------------------------------------------------------- */
+#header { padding: .75em 0 0 0; height: 165px; border-bottom: 1px solid #633B1B;}
+#header #logo { height: 70px; }
+#header #logo .title { padding: 0 0 .2em 0; font: 700 3em arial, sans-serif; letter-spacing: -.050em; line-height: 1.2em; color: #000; }
+#header #logo .title .desc { text-align: left; margin: 0.4em 0 0 0; font: 8.5px arial, sans-serif; text-transform: uppercase; color: #666; letter-spacing: 0.2em; padding: 0.2em 0 0 1.5em; border-top: 1px solid #ccc;  }
+#header #logo .title a { text-decoration: none; color: #000; }
+#header #logo .title a:hover { color: #fff; background: #000; }
+#header #logo a.sitelogo { display: block; width: 400px; height: 90px; background: url(images/bg/sitelogo.png) no-repeat; }
+
+/* Search and navigation
+-------------------------------------------------------------- */
+
+#header #search_menu { height: 55px; margin-top: 10px;}
+#header #search_menu #search { padding: 0 0 0 5px; }
+#menu { width: 225px; float: right; margin: 5px 0px 0 2px; list-style: none; font-weight: bold; font-family: Helvetica, Arial; }
+#menu li { float: left; padding: 2px 0 3px 8px; margin: 1px 13px 0 0; line-height: 1.6em; font-size: 0.9em; }
+#menu li a { padding: 0; text-decoration: none; color: #000; }
+#menu li a:hover { padding: 0; text-decoration: underline; }
+#menu li span { display: block; float: left; padding: 0 0px 0 20px; }
+#menu li span.home { background: url(images/bg/home.gif) no-repeat; }
+#menu li span.about { background: url(images/bg/info.gif) no-repeat; }
+#menu li span.archives { background: url(images/bg/hourglass.gif) no-repeat; }
+#menu li span.subscribe { background: url(images/bg/feed-16x16-def.gif) no-repeat;}
+#menu li span.contact { background: url(images/bg/mail.gif) no-repeat;}
+#menu li span.fb { background: url(images/bg/fb_icon.jpg) no-repeat; float: left; margin-left: -3px;}
+#menu li span.twitter { background: url(images/bg/twitter_icon.jpg) no-repeat; float: left;}
+#menu li span.apply { background: url(images/bg/apply.png) no-repeat; float: left; margin-left: -3.5px;}
+div#quick-contact {float: right; display: inline; width: 225px; margin: -10px 0 0 0;}
+div#quick-contact p {line-height: 1.5; font-size: .9em; text-align: center; margin: 0; padding: 0; font-weight: bold; float: left; width: 170px;}
+
+/* sports nav */
+#navbar {float: left; background: #FBFAF4; margin: 0; padding: 0; width: 100%; list-style: none; clear: both; border-bottom: 1px solid #633B1B; display: block;}
+/* 633B1B */
+#navbar li { float: left; padding: 0px 0 3px 3px; margin: 1px 12px 0 0; line-height: 1.45em; font-size: 1.8em;}
+#navbar li a { border-bottom: 1px solid #999;}
+#navbar li.red-claws a:hover, #navbar li.red-claws_selected a { border-bottom: 3px solid #c51230;}
+#navbar li.red-sox a:hover, #navbar li.red-sox_selected a { border-bottom: 3px solid #E60000;}
+#navbar li.patriots a:hover, #navbar li.patriots_selected a { border-bottom: 3px solid #005cd4;}
+#navbar li.celtics a:hover, #navbar li.celtics_selected a { border-bottom: 3px solid #00681b;}
+#navbar li.bruins a:hover, #navbar li.bruins_selected a { border-bottom: 3px solid #EFD700;}
+#navbar li.fantasy a:hover,#navbar li.fantasy_selected a { border-bottom: 3px solid #e39729;}
+#navbar li.opinion a:hover,#navbar li.opinion_selected a { border-bottom: 3px solid #241B34;}
+#navbar li.college a:hover,#navbar li.college_selected a { border-bottom: 3px solid #70112D;}
+#navbar li.now a:hover,#navbar li.now_selected a { border-bottom: 3px solid #0B6885;}
+h2.default a {font-family: "Lucida Grande", verdana, arial; line-height: 1.2;}
+h2.default {margin-bottom: 4px;}
+h2.red-sox a:hover,#navbar li.red-sox a,#navbar li.red-sox_selected a,span.red-sox {color: #E60000;}
+h2.patriots a:hover, #navbar li.patriots a,#navbar li.patriots_selected a,span.patriots  {color: #005cd4;}
+h2.celtics a:hover,#navbar li.celtics a,#navbar li.celtics_selected a,span.celtics  {color: #00681b;}
+h2.bruins a:hover, #navbar li.bruins a,#navbar li.bruins_selected a,span.bruins  {color: #d8c200;}
+h2.fantasy a:hover, #navbar li.fantasy a,#navbar li.fantasy_selected a {color: #e39729;}
+h2.opinion a:hover, #navbar li.opinion a,#navbar li.opinion_selected a {color: #241B34;}
+h2.college a:hover, #navbar li.college a,#navbar li.college_selected a {color: #70112D;}
+h2.now a:hover, #navbar li.now a,#navbar li.now_selected a {color: #0B6885;}
+h2.news a:hover, #navbar li.news a,#navbar li.news_selected a {color: #444;}
+h2.red-claws a:hover, #navbar li.red-claws a,#navbar li.red-claws_selected a {color: #c51230;}
+h2.default a:hover {color: #777;}
+#navbar li.more {margin: 1px 0 0 40px; font-size: 1.2em;}
+
+/* Top banner with rotating images
+-------------------------------------------------------------- */
+#topbanner-sob { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/fenway_seats.jpg) no-repeat; }
+#topbanner_arch { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/archive_banner.png) no-repeat; }
+#topbanner_red-sox { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/fenway_park.png) no-repeat; }
+#topbanner_opinion { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/opinion.jpg) no-repeat; }
+#topbanner_fantasy { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/fantasy.png) no-repeat; }
+#topbanner_celtics { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/celtics.png) no-repeat; }
+#topbanner_bruins { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/bruins.png) no-repeat; }
+#topbanner_patriots { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/patriots.png) no-repeat; }
+#topbanner_college { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/college_field.jpg) no-repeat; }
+#topbanner_now { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/celtics_dancers.jpg) no-repeat -3px 0; }
+#topbanner_single { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/single_banner.png) no-repeat; }
+#topbanner .pagetitle, #topbanner_arch .pagetitle, #topbanner_single .pagetitle, .pagetitle, .pagetitle h1 { float: left; background: #fff; color: #000; font: 700 2em arial, sans-serif; text-transform: lowercase; letter-spacing: -0.036em; padding: 1px 5px 1px 3px; margin: 20px 0 0 0; }
+.pagetitle h1 { font: 700 1em arial, sans-serif; margin: 0; text-transform: none;}
+
+/* Home page columns
+-------------------------------------------------------------- */
+
+#home_content { margin: 1.5em 0; }
+
+/* top_story post */
+
+#top_story { padding: 0 0 1.5em 0;}
+#top_story_image img { text-align: center; margin: 0;}
+.top_story_meta { font-size: 0.9em; line-height: 1.6em; }
+.top_story_meta a { font-weight: bold; }
+.top_story_meta a:hover { text-decoration: underline; }
+.top_story_read_on { padding: 0 20px 1px 20px; background: url(images/bg/readon.png) no-repeat top left; }
+.top_story_comments { padding: 0 20px 1px 20px; background: url(images/bg/comment.png) no-repeat top left; }
+.top_story_category { padding: 0 20px 1px 20px; background: url(images/bg/category.png) no-repeat top left; }
+/* home recent posts */
+
+.entry {border-top:3px solid #DDDDDD;line-height:1.4;margin-top:2px;padding:0;}
+.post {margin: 10px 0 0 0;}
+.entry_content {margin: 0 0 0 15px; font-family: Verdana;}
+.entry div.author {display: block;color: #777;border-bottom: 1px dotted #ddd;margin: 2px 0 2px 7px; padding-bottom: 4px;}
+.entry span.author { margin-top: 3px; display: block; float: left;}
+.entry a.author-com {margin-top: 3px; display: block;}
+.entry a.author-com:hover {color: #147; text-decoration: none;}
+.entry a.author-com {color: #06c; text-decoration: underline;}
+small a,div#home_content ul li a,div#home_content ol li a, div#post_content ul li a,div#post_content ol li a, div#arch_content ul li a,div#arch_content ol li a, div.bio a,div#home_right span a, table a,.adroll-link a,div#page_content ul li a, div#page_content ol li a,div#post_content p a,div#arch_content span a, div#top_story_content a,div.entry_content a, div#quick-contact a {color: #06c; text-decoration: underline;}
+small a:hover,.navigation a:hover,div#home_content ul li a:hover,div#home_content ol li a:hover,div#post_content ul li a:hover,div#post_content ol li a:hover, div#arch_content ul li a:hover,div#arch_content ol li a:hover, div.bio a:hover,div#page_content ul li a:hover, div#page_content ol li a:hover,div#home_right span a:hover, table a:hover, .adroll-link a:hover,div#top_story_content a:hover, div#post_content p a:hover,div.entry_content a:hover, div#quick-contact a:hover, div#arch_content span a:hover {color: #147; text-decoration: none;}
+.tags a {color: #06c; text-decoration: none;}
+.tags a:hover {color:#fff; background: #06c;}
+div.tags {margin: 0 0 10px 0;}
+.span-3 ul,.span-4 ul { margin: 0 0 1em 3px; padding: 0; list-style-position: inside;}
+.span-3 li,.span-4 li {padding: 0; margin: 0;}
+
+/* featured post */
+
+#home_featured { background: #f2f2f2 url(images/bg/dot.png) repeat-x bottom left; margin: 0 0 1.1em 0; float: left; width: 100%; }
+.feat_content { float: left; padding: 0 0.7em 0.4em 0.7em; }
+.feat_thumb img { float: left; padding: 0; margin: 0.2em 1em 1em 0; border: 1px solid #999; }
+.feat_title { font: 700 12px georgia, serif; padding: 0 0 0.3em 0; }
+.feat_title a { color: #224970; }
+.feat_title a:hover { color: #000; }
+
+/* asides */
+
+ul.arrow, ul.cat, ul.reccom, ul.email { list-style: none; list-style-image: url(foo.html); margin: 0; }
+ul.arrow li { padding: 0 0 0.5em 12px; margin: 0 0 0.5em 0; border-bottom: 1px solid #dadada; border-left: 5px solid #dadada; }
+ul.arrow li a, ul.reccom li a, ul.email li a { color: #224970; }
+ul.arrow li a:hover, ul.reccom li a:hover, ul.email li a:hover { color: #000; background: #eee; }
+
+/* about */
+
+#home_about { border-bottom: 1px solid #dadada; border-top: 1px solid #dadada; margin: 0 0 1em 0; background: #f3f9ff; padding: 0.5em 0.7em 0 0.7em; }
+#home_about p { font-size: 0.9em; font-family: tahoma; }
+
+/* home featured posts */
+
+.home_recent_post { padding: 0.1em 0 1.2em 0; margin: 0 0 0.8em 0; background: url(images/bg/dot.png) repeat-x bottom left; }
+.home_recent_thumb { padding: 0 10px 0 0; margin: 2px 0 0.25em 0; float: left; }
+.home_recent_thumb img { float: left; margin: 0; }
+.home_recent_thumb a img { background: #999; padding: 2px; margin: 0; border: 0; }
+.home_recent_thumb a:hover img { background: #222; padding: 2px; margin: 0; border: 0; }
+.home_recent_title a { font-weight: bold; }
+.home_recent_title a:hover { color: #fff; background: #000; }
+.home_recent_date, .home_recent_auth { padding: 0; margin: 0; color: #666; font-size: 0.9em; }
+.home_recent_exc p { color: #666; text-align: left; }
+
+/* category list */
+
+#side_categories { margin: 0 0 1em 0; }
+ul.cat li { padding: 0 0 0.3em 0; margin: 0; }
+ul.cat li a { display: block; text-transform: uppercase; font-size: 0.8em; font-weight: bold; color: #000; border-bottom: 1px solid #dadada; border-left: 3px solid #dadada; padding: 3px 12px 0 7px; margin: 0; background: url(images/bg/arrow.png) no-repeat 177px 3px; height: 19px; }
+ul.cat li a:hover { background: #f1f1f1 url(images/bg/arrow2.png) no-repeat 177px 3px; color: #224970; }
+ul.cat li ul { list-style: none; list-style-image: url(foo.html); margin: 0; padding: 0.3em 0 0.2em 0.8em; }
+ul.cat li ul li { padding: 0; margin: 0; }
+ul.cat li ul li a { border: 0; margin: 0; padding: 0 0 0 12px; text-transform: none; font-size: 0.9em; height: 19px; background: url(images/bg/sub.png) no-repeat; }
+ul.cat li ul li a:hover { background: #f1f1f1 url(images/bg/sub1.png) no-repeat; }
+
+/* recent comments */
+
+#side_recent_comments, #side_most_emailed { margin: 0 0 1.4em 0; }
+
+ul.reccom li { padding: 0 0 0.2em 20px; margin: 0 0 0.5em 0; border-bottom: 1px solid #dadada; background: url(images/bg/bubble.png) no-repeat 0 3px; }
+
+/* most emailed */
+
+ul.email li { padding: 0 0 0.2em 20px; margin: 0 0 0.5em 0; border-bottom: 1px solid #dadada; background: url(images/bg/doc.png) no-repeat 0 3px; }
+
+/* ad */
+.ad_block { border: 1px solid #dadada; padding: 4px 0; margin: 1em 0 1.2em; text-align: center; }
+.ad_block .ad160 { margin: 0 auto; width: 160px; }
+.ad-160 {margin: 0 70px;}
+.ad_block .ad180 { margin: 0 auto; width: 180px; }
+.ad_block .ad250, div.ad_holding { margin: 0 auto; width: 250px; }
+.ad_block img, .ad_block p img { margin: 0; padding: 0; display: block; }
+div.ad-nav {width: 100%; background-color: #FBFAF4; border-bottom: 1px solid #633B1B;}
+
+/* Archive styles
+-------------------------------------------------------------- */
+
+#arch_content, #post_content { margin: .1em 0; }
+.archive_meta { margin: 1.5em 0; border-top: 1px solid #dadada; }
+.archive_meta a { color: #666; }
+.archive_meta a:hover { color: #224970; }
+.archive_feed { padding: 0.5em 1.5em; margin: 0; border-bottom: 1px solid #dadada; background: url(images/bg/feedicon12.png) no-repeat 0 8px; color: #666; }
+.archive_number { padding: 0.5em 1.5em; margin: 0; border-bottom: 1px solid #dadada; color: #666; background: url(images/bg/info.png) no-repeat 0 8px;  }
+.archive_email { padding: 0.5em 1.5em; margin: 0; border-bottom: 1px solid #dadada; color: #666; background: url(images/bg/email_author.png) no-repeat 0 9px;  }
+.archive_post_block { padding: 0.1em 0 0 0; border-bottom: 1px solid #dadada; margin: 0 0 1.2em 0; }
+.archive_post_meta { color: #818181; padding: 0 0 0.6em 0; }
+.archive_post_meta a, .post_meta a { color: #224970; }
+.archive_post_meta a:hover, .post_meta a:hover { color: #000; text-decoration: underline; }
+
+/* Single post styles
+-------------------------------------------------------------- */
+
+.post_meta { color: #818181; padding: 0.3em 0 .5em 0; float: left; width: 100%;}
+#post_content p img,div.entry_content img { float:right; margin:0 0 0 6px; padding: 1.5px; border: 1px solid #777;}
+#post_content img {float:right; display: inline; margin: 1em;}
+#post_content img.WP-PrintIcon, #post_content img.WP-EmailIcon { margin: 0 0.3em 0 0;padding: 0; }
+#post_content p, #top_story_content p, .entry_content p, #post_content li, #top_story_content li, .entry_content li, #arch_content p, .page_content p, .page_content li  {font-size: 1.12em;}
+#post_content p a, #arch_content p a, .post_meta a, #top_story_content a,.entry p a { color: #06c; }
+#post_content p a:hover, #arch_content p a:hover, #top_story_content a:hover,.entry p a:hover { color: #000; text-decoration: underline; }
+
+/* quick hit */
+div.quick-hit {border: 3px solid #06c; padding: 5px; border-radius: 15px;}
+
+/* Comment area styles
+-------------------------------------------------------------- */
+
+#comments { margin-top: 1.5em; }
+#commenthead { margin-bottom: 1em; }
+ol#commentlist { list-style-type: none; margin: 0; padding: 0 0 12px 0; }
+ol#commentlist li { border-right: 3px solid #dadada; border-bottom: 1px solid #dadada; margin: 0 0 1em 0; padding: 0 1em 1em 0; overflow-x: hidden; }
+ol#commentlist li.alternate { border-right: 3px solid #999; border-bottom: 1px solid #dadada; }
+ol#commentlist cite { font-style: normal; text-align: left; display: block; color: #818181; }
+ol#commentlist cite a { color: #224970; }
+ol#commentlist cite a:hover { color: #000; text-decoration: underline; }
+ol#commentlist li blockquote { float: none; width: auto; padding: 0 2em 0 0; margin: 0.5em 0; color: #818181; font: italic 1em arial, sans-serif; letter-spacing: 0; text-align: left; }
+ol#commentlist li .commentauthor { font-weight: bold; color: #333; }
+ol#commentlist li .commentauthor a, ol#commentlist li .commenttime a { font-weight: bold; color: #224970; }
+ol#commentlist li .commentauthor a:hover, ol#commentlist li .commenttime a:hover { color: #000; text-decoration: underline; }
+ol#commentlist li .commnumber { width: 30px; text-align: left; float: left; font-size: 3em; font-weight: bold; line-height: 1em; }
+ol#commentlist li .commentcont p { margin: 0 0 0.5em 0; padding: 0; font-size: 1em; }
+div.comment-author {
+		float: left;
+		margin: 0;
+		position: relative;
+	}
+/* comment form */
+
+#comment-form form { margin-top: 1.5em; }
+label.com { float: left; width: 100px; }
+input.comtext, textarea.comtext { width: 300px; border-top: 1px solid #999; border-left: 1px solid #999; border-bottom: 1px solid #dadada; border-right: 1px solid #dadada; padding: 2px; }
+input.comtext:focus, input.comtext:hover, textarea.comtext:focus, textarea.comtext:hover { background: #f7f7f7; border-top: 1px solid #999; border-left: 1px solid #999; border-bottom: 1px solid #dadada; border-right: 1px solid #dadada; }
+input.comsubmit { margin-left: 100px; }
+ul.archives {  margin: 0 0 1.5em 0; list-style: none; list-style-image: url(foo.html); }
+ul.archives li { padding: 0 0 0.2em 20px; background: url(images/bg/doc.png) no-repeat 0 3px; }
+ul.archives li a { color: #224970; }
+ul.archives li a:hover { color: #000; background: #eee; }
+
+/* Footer
+-------------------------------------------------------------- */
+
+#footer { background: url(images/bg/dot.png) repeat-x top left; padding: 1em 0 0 0; color: #666; }
+
+/* Form styles
+-------------------------------------------------------------- */
+
+input.search_input { width: 292px; border: 0; background: #fff url(images/bg/input.png) no-repeat; padding: 6px; color: #E0691A; font-weight: bold; margin: 0 0 0 0; float: left; }
+input.submit_input { background: /*#E0691A*/ url(images/bg/submit.png) no-repeat; border: 0; height: 24px; padding: 0; width: 65px; margin: 0 0 0 5px; color: #FFF; font: bold 0.9em arial, sans-serif; float: left; }
+
+/* Miscellaneous styles
+-------------------------------------------------------------- */
+
+/*  heading styles */
+
+h2.archive_name { letter-spacing: -0.04em; }
+div#post_content h1.post_name a,div#post_content h1.post_name a:hover {letter-spacing: -0.04em;line-height: 1.3; clear: both; display: inline; font-weight: auto; border-bottom: 1px dotted #fff; color: #00468c; font-weight: bold;}
+div#post_content h1.post_name a:hover {border-bottom: 1px dotted #00468c;}
+span.post_cat { text-transform: uppercase; font-size: 0.8em; line-height: 1.8em; font-weight: bold; padding: 0 0 0.2em 0; margin: 0 0 1em 0; letter-spacing: 0.1em; color: #999; border-bottom: 1px solid #dadada; }
+div#post_content h2.post_comm { text-transform: uppercase; font-size: 0.8em; line-height: 1.8em; font-weight: bold; padding: 0.3em 0 0.2em 0; margin: 0 0 0.2em 0; letter-spacing: 0.1em; color: #00468c; border-bottom: 1px solid #dadada; background: url(images/bg/stripe.png) repeat; display: block; clear: both;}
+div#post_content h2.post_comm2 { text-transform: uppercase; font-size: 0.8em; line-height: 1.8em; font-weight: bold; padding: 0.3em 0 0.2em 0; margin: 0 0 0.2em 0; letter-spacing: 0.1em; color: #00468c; border-bottom: 1px solid #dadada; }
+h2.top_story_title a {
+	font-weight: bold;
+	font-size: 1.1em;
+	font-family: "Lucida Grande", arial, sans-serif;
+	line-height: 1.2em;
+	margin: 0;
+	letter-spacing: -.035em;
+	padding: 0;
+	border-bottom: 1px solid #fff;
+	margin-bottom: 10px;
+	color: #444;
+}
+h2.top_story_title { margin-bottom: 7px;}
+div.entry_content h2 {line-height: 1.2;}
+h2.top_story_title a:hover { border-bottom: 1px dotted #000; color: #000;}
+h3.home_featured { background: url(images/bg/dot.png) repeat-x top left; text-transform: uppercase; font-size: 0.8em; line-height: 1.8em; font-weight: bold; padding: 0.7em 0.7em 0.9em 0.7em; color: #5f9410; letter-spacing: 0.1em; }
+h3.mast,h3.mast2,h3.mast3,h3.mast4,h3.mast5 {font-family: Helvetica, Arial, "Lucida Grande", Verdana, sans-serif; font-size: 0.85em;}
+div#post_content h3.mast,h3.mast { text-transform: uppercase; line-height: 1.8em; font-weight: bold; padding: 0em 0 .05em 0; color: #a11b1b; }
+h3.mast2 { text-transform: uppercase; line-height: 1.8em; font-weight: bold; padding: 0 0 0.2em 0; color: #5f9410; }
+h3.mast3 { text-transform: uppercase; line-height: 1.8em; font-weight: bold; padding: 0 0 0.2em 0; letter-spacing: 0.0em; color: #224970; }
+h3.mast4 { text-transform: uppercase; line-height: 1.8em; font-weight: bold; padding: 0 0 0.6em 0; letter-spacing: 0.0em; }
+h3.mast5 { text-transform: uppercase; line-height: 1.8em; font-weight: normal; padding: 0 0 0.2em 0; letter-spacing: 0.0em; color: #5f9410; }
+h3.mast a {color: #A11B1B; text-decoration: underline;}
+h3.mast a:hover {text-decoration: none}
+h3.archive_title { line-height: 1em; padding: 0 0 5px 0; }
+h3.archive_title a { font: bold 1.0em arial, sans-serif; color: #000; letter-spacing: -0.036em; }
+h3.archive_title a:hover { color: #fff; background: #000; }
+
+/* miscellaneous */
+
+.none { display: none; }
+.border_left { padding-left: 9px; margin-left: 0; border-left: 1px solid #ddd; }
+.dot { font-family: "lucida sans unicode", "arial unicode ms", sans-serif; }
+.navigation { color: #818181; margin: 10px 0;}
+
+/* image caption classes */
+
+.captionleft { float: left; margin: 0 1.5em 1em 0; padding: 0.5em; text-align: left; }
+.captionright { float: right; margin: 0 0 1em 1.5em; padding: 0.5em; text-align: left; }
+.captionfull { margin: 0 0 1em 0; padding: 0; text-align: left; }
+.captionleft img, .captionright img, .captionfull img { margin: 0; display: block; }
+.captionleft p, .captionright p, .captionfull p { background: #eee; margin: 0; line-height: 1.6em; padding: 0.5em; border-bottom: 1px solid #ccc; border-top: 1px solid #ccc; font-size: 0.9em; color: #555; }
+
+/* teams */
+
+div.post-default {
+    padding-left: 5px;
+}
+div.opinion {
+	border-top: 3px solid #241B34;
+	background: url(images/bg/opinion_small.png) no-repeat 0 4px;
+}
+div.news {
+	border-top: 3px solid #000;
+	background: url(images/bg/news.png) no-repeat 0 4px;
+}
+div.red-sox {
+	border-top: 3px solid #E60000;
+	background: url(images/bg/baseball.png) no-repeat 0 4px;
+}
+div.celtics {
+	border-top: 3px solid #009427;
+	background: url(images/bg/basketball.png) no-repeat 0 4px;
+}
+div.bruins {
+	border-top: 3px solid #EFD700;
+	background: url(images/bg/puck.png) no-repeat 0 4px;
+}
+div.patriots {
+	border-top: 3px solid #005CD4;
+	background: url(images/bg/football.png) no-repeat 0 7px;
+}
+div.college {
+	border-top: 3px solid #70112D;
+	background: url(images/bg/cheer.png) no-repeat 0 4px;
+}
+div.now {
+	border-top: 3px solid #0B6885;
+	background: url(images/bg/star.png) no-repeat 0 7px;
+}
+div.fantasy {
+	background: url(images/bg/trophy.png) no-repeat 0 2px;
+	border-top: 3px solid #e39729;
+}
+div.red-claws {
+	background: url(images/bg/ball2.html) no-repeat 0 4px;
+	border-top: 3px solid #c51230;
+}
+div.default, div.mlb, div.nhl, div.nba, div.nfl, div.national {
+    border-top: 3px solid #000;
+}
+
+/* BIOS */
+div.bio {
+	border: 1px solid #666;
+	padding: .5em 1.5em;
+	text-align: left;
+	margin-bottom: 5px;
+}
+div.bio ul {
+	margin: 0 0 1.5em 1em;
+	list-style: none;
+}
+div.bio span {
+	font-size: 140%;
+	text-decoration: underline;
+	font-weight: bold;
+	display: block;
+}
+div.bio span.stat {
+	font-size: 100%;
+	font-weight: normal;
+	color: black;
+	text-decoration: none;
+	margin: 0 0 0 4px;
+	line-height: 1;
+}
+
+/* breaking news button */
+
+div#breaking {
+	font-family: "Lucida Grande", "Monaco", Tahoma, Verdana, sans-serif;
+	padding: 3px 5px;
+	font-size: 16px;
+	line-height: 1.5em;
+	margin-right: 10px;
+	border: 3px solid #000;
+	background-color: red;
+	color: #000;
+
+	text-transform: uppercase;
+	-webkit-border-radius: 8px;
+	display: inline;
+	border-radius: 5px;
+	cursor: pointer;
+	text-decoration: none;
+	/*
+	-moz-border-radius-bottomleft:5px;
+	-moz-border-radius-bottomright:5px;
+	-moz-border-radius-topleft:5px;
+	-moz-border-radius-topright:5px;
+	-moz-border-radius: 5px;
+	-khtml-border-radius: 5px;
+	*/
+}
+h3.breaking {
+	font-size: 2em;
+	margin: 0;
+	padding: 0;
+	line-height: 1;
+	color: #fff;
+	font-family: "Lucida Grande", "Monaco", Tahoma, Verdana, sans-serif;
+	background-color: #d20000;
+	display: inline;
+}
+/* columns */
+div.pink {
+	background: url(images/bg/pinkhat.jpg);
+	height: 65px;
+	float: right;
+	width: 100px;
+	margin-top: -15px;
+}
+div.four-pt {
+	background: url(images/bg/4pt.jpg);
+	height: 60px;
+	float: right;
+	width: 60px;
+	margin-top: -15px;
+}
+div.view-from-the-monster {
+	background: url(images/bg/binoculars.jpg) no-repeat;
+	height: 81px;
+	float: right;
+	width: 90px;
+	margin-top: -15px;
+}
+
+/* fancy image */
+#ShadowBox table, #ShadowBox tr, #ShadowBox td, #ShadowBox th {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	background-color: transparent;
+}
+#ShadowBox td, #ShadowBox th, #ShadowBox img, #ZoomBox img {
+	height: auto;
+	margin: 0;
+}
+#ZoomCapDiv table, #ZoomCapDiv td, #ZoomCapDiv th, #ZoomCapDiv img {
+	border: 0 none;
+	padding: 0;
+	margin: 0;
+	height: auto;
+	line-height: 1;
+	vertical-align: middle;
+	background-color: transparent;
+}
+
+/* Games */
+table#upcoming_games, table#recent_games {
+	margin: 0 auto 10px auto;
+	font-size: .85em;
+}
+table#upcoming_games_home {
+	font-size:.9em;
+	margin: 0 auto 10px auto;
+}
+.win {
+	font-weight: bold;
+	color: green;
+}
+.lose {
+	font-weight: bold;
+	color: red;
+}
+span.going_now {
+	font-weight: bold;
+}
+div#going_now {
+	background-color: #FBFAF4;
+	margin-bottom: 0;
+	margin-top: -3px;
+	padding-bottom: 1px;
+	border-bottom: 1px solid #633B1B;
+	padding-left: 5px;
+	float: left;
+	width: 955px;
+}
+div#going_now a:hover {
+	border-bottom: 2px solid #000;
+	background: #A87830;
+}
+div#going_now a {
+	border-bottom: 2px solid #147;
+}
+
+/* ad roll */
+
+div.inline-ads-200 div.adroll-link a {
+	margin: 0;
+	padding: 0;
+}
+div.adroll-link, div.adroll-block {
+	margin: 0;
+	padding: 0;
+}
+div.adroll-link, div.cityswag {
+	float: left;
+	margin: 0;
+	padding: 0;
+}
+div#post_content table.recent-stories {
+	width: 640px;
+	float: left;
+	margin: 0 10px 1px 0;
+	padding: 0;
+	border-collapse: collapse;
+	border: none;
+	clear: both;
+	height: 100%;
+}
+div#post_content table.recent-stories tr {
+	margin: 0;
+	padding: 0;
+}
+div#post_content table.recent-stories td {
+	width: 160px;
+	vertical-align: top;
+	padding: 2px;
+	border-right: 2px solid #666;
+	border-left: 2px solid #666;
+	border-bottom: none;
+	text-align: center;
+}
+div#post_content table.recent-stories td:hover {
+	background-color: #ddd;
+}
+div#post_content table.recent-stories img {
+	vertical-align: middle;
+	border: 2.5px solid #000;
+	display: block;
+	float: none;
+	margin: 0 auto;
+}
+div#post_content table.recent-stories a {
+	display: block;
+	float: none;
+	text-align: center;
+	margin: 0 auto;
+	width: 140px;
+	padding: 0;
+}
+hr.recent-stories {
+	margin: 0;
+	padding: 0;
+	background-color: transparent;
+	border-top: 1px dotted #000;
+	line-height: 0;
+	clear: both;
+	float: left;
+}
+div.footer-link {
+	display: inline;
+	margin-right: 7px;
+	vertical-align: top;
+}
+div.footer-link a {
+	vertical-align: top;
+	color: #666;
+	text-decoration: underline;
+}
+div.footer-link a:hover {
+	vertical-align: top;
+	color: #000;
+	text-decoration: none;
+}
+div#ad-728 {
+	float: left;
+	width: 728px;
+	height: 90px;
+}
+div#left-menu {
+	float: right;
+	height: 100px;
+	width: 225px;
+	margin-top: -9px;
+}
+
+div#post_content a img.alignleft,div.entry_content a img.alignleft, div#top_story_content a img.alignleft {
+	clear: both;
+	display: inline;
+	float: left;
+	margin: 5px 0;
+	padding: 0;
+}
+div#post_content p a img.alignleft,div.entry_content p a img.alignleft, div#top_story_content p a img.alignleft {
+	float: none;
+	margin: 0;
+	padding: 0;
+}
+
+div.tweet {
+	float: right;
+	margin-right: 0.25em;
+}
+
+div#top-story-author {
+	margin: -5px 0 5px 15px;
+	display: block;
+}
+
+
+/* other teams */
+/* #topbanner_red-sox { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/fenway_park.png) no-repeat;} */
+
+#topbanner-sony, #topbanner_yankees { height: 70px; border-bottom: 1px solid #999; background: url(images/bg/yankee_stadium.jpg) no-repeat; }
+#navbar li.yankees a:hover, #navbar li.yankees_selected a {border-bottom: 3px solid #000;}
+div.yankees {border-top: 3px solid #000; background: url(images/bg/baseball.png) no-repeat 0 4px;}
+#navbar li.yankees a,#navbar li.yankees_selected a,span.yankees {color: #000;}
+#navbar li.mets a:hover, #navbar li.mets_selected a {border-bottom: 3px solid #FF5910;}
+div.mets {border-top: 3px solid #FF5910; background: url(images/bg/baseball.png) no-repeat 0 4px;}
+#navbar li.mets a,#navbar li.mets_selected a,span.mets {color: #FF5910;}
+#navbar li.giants a:hover, #navbar li.giants_selected a {border-bottom: 3px solid #1b2361;}
+div.giants {border-top: 3px solid #1b2361; background: url(images/bg/football.png) no-repeat 0 4px;}
+#navbar li.giants a,#navbar li.giants_selected a,span.giants {color: #1b2361;}
+#navbar li.jets a:hover, #navbar li.jets_selected a {border-bottom: 3px solid #29433a;}
+div.jets {border-top: 3px solid #29433a; background: url(images/bg/football.png) no-repeat 0 4px;}
+#navbar li.jets a,#navbar li.jets_selected a,span.jets {color: #29433a;}
+#navbar li.knicks a:hover, #navbar li.knicks_selected a {border-bottom: 3px solid #007ac1;}
+div.knicks {border-top: 3px solid #007ac1; background: url(images/bg/basketball.png) no-repeat 0 4px;}
+#navbar li.knicks a,#navbar li.knicks_selected a,span.knicks {color: #007ac1;}
+#navbar li.nets a:hover, #navbar li.nets_selected a {border-bottom: 3px solid #002a60;}
+div.nets {border-top: 3px solid #002a60; background: url(images/bg/basketball.png) no-repeat 0 4px;}
+#navbar li.nets a,#navbar li.nets_selected a,span.nets {color: #002a60;}
+#navbar li.rangers a:hover, #navbar li.rangers_selected a {border-bottom: 3px solid #0060a9;}
+div.rangers {border-top: 3px solid #0060a9; background: url(images/bg/puck.png) no-repeat 0 4px;}
+#navbar li.rangers a,#navbar li.rangers_selected a,span.rangers {color: #0060a9;}
+#navbar li.islanders a:hover, #navbar li.islanders_selected a {border-bottom: 3px solid #f15523;}
+div.islanders {border-top: 3px solid #f15523; background: url(images/bg/puck.png) no-repeat 0 4px;}
+#navbar li.islanders a,#navbar li.islanders_selected a,span.islanders {color: #f15523;}
+
+div.podcasts {border-top: 3px solid #AA6ADA; background: url(images/bg/podcast.png) no-repeat 0 4px;}
+#navbar li.podcasts a:hover, #navbar li.podcasts_selected a {border-bottom: 3px solid #AA6ADA;}
+#navbar li.podcasts a,#navbar li.podcasts_selected a,span.podcasts {color: #AA6ADA;}
+#navbar li.about a:hover, #navbar li.about_selected a {border-bottom: 3px solid #ABBB9F;}
+#navbar li.about a,#navbar li.about_selected a,span.about {color: #ABBB9F;}
+div.musings {border-top: 3px solid #6F8B94;}
+#navbar li.musings a:hover, #navbar li.musings_selected a {border-bottom: 3px solid #6F8B94;}
+#navbar li.musings a,#navbar li.musings_selected a,span.musings {color: #6F8B94;}
+
+#topbanner-pt, #topbanner_podcasts { height: 204px; border-bottom: 1px solid #999; background: url(images/bg/cropped-pointtaken5.jpg) no-repeat 95px 4px; }
+div.share {
+	float: right;
+	margin-right: 10px;
+}
+div.top-share {
+	float: left;
+	width: 320px;
+}
+div#single-share {
+	width: 320px;
+}
+
+div#author-desc {
+	float: left;
+	width: 400px;
+	background: #F0F4F9;
+	border: 1px solid gray;
+	border-radius: 5px;
+	padding: 4px;
+}
+div#author-desc p {
+	margin-bottom: 0;
+}
+img.avatar {
+	border: 1px solid #ddd;
+}
+
+.black {
+	color: #000;
+}
